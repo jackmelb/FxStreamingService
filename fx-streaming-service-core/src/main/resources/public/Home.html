@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fxApp">
+<head>
+    <meta charset="UTF-8">
+    <title>FxStreamingPrices</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav">
+
+                </ul>
+            </div>
+
+        </div>
+        <div ng-controller="fxPriceController">
+            <div class="row">
+                <div class="span11">
+                    <h2>{{fxPrice.ccyName}}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span5">
+                    <div><strong>Bid: </strong>{{fxPrice.bid}}</div>
+                    <div><strong>Ask: </strong>{{fxPrice.ask}}</div>
+                    <div><strong>TimeStamp: </strong>{{fxPrice.time}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/FxPriceController.js"></script>
+    <script src="js/services/StreamingPriceService.js"></script>
+</body>
+</html>
